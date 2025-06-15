@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Sistema CFTV - Mercadinho e Pensão Canário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        header {
+            background: #2c5282;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .client-info {
+            display: flex;
+            justify-content: space-between;
+            background: #e8f0fe;
+            padding: 15px 25px;
+            border-bottom: 1px solid #d1dbe5;
+            font-size: 15px;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+        
+        h2 {
+            color: #2c5282;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        h3 {
+            color: #2c5282;
+            margin: 20px 0 10px;
+            font-size: 17px;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c5282;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background-color: #2c5282;
+            color: white;
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 500;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .material-link {
+            color: #2c5282;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 3px;
+            font-size: 14px;
+        }
+        
+        .material-link:hover {
+            text-decoration: underline;
+        }
+        
+        .pricing-table {
+            margin-top: 20px;
+            width: 60%;
+            float: right;
+        }
+        
+        .pricing-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        .total-row {
+            font-weight: bold;
+            background-color: #e8f0fe !important;
+            font-size: 16px;
+        }
+        
+        .total-row td {
+            border-top: 2px solid #2c5282;
+            border-bottom: none;
+        }
+        
+        .signature {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px dashed #cbd5e0;
+            clear: both;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8fafc;
+            color: #718096;
+            font-size: 14px;
+            margin-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #718096;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .material-link {
+                color: #2c5282;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .client-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .pricing-table {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ORÇAMENTO DE MANUTENÇÃO E IMPLEMENTAÇÃO</h1>
+            <div class="subtitle">SISTEMA DE CFTV</div>
+        </header>
+        
+        <div class="client-info">
+            <div><strong>Cliente:</strong> Mercadinho e Pensão Canário</div>
+            <div><strong>Data de emissão:</strong> 15/06/2025</div>
+        </div>
+        
+        <div class="content">
+            <h2>ESCOPO DOS SERVIÇOS</h2>
+            
+            <h3>1. Manutenção Corretiva das Câmeras Antigas</h3>
+            <ul>
+                <li>Diagnóstico e reativação das câmeras não operacionais</li>
+                <li>Organização do cabeamento conforme normas</li>
+                <li>Ocultação dos cabos expostos</li>
+                <li>Limpeza e ajustes técnicos</li>
+            </ul>
+            
+            <h3>2. Integração das Câmeras Antigas</h3>
+            <ul>
+                <li>Unificação do monitoramento</li>
+                <li>Configuração e testes de compatibilidade</li>
+            </ul>
+            
+            <h3>3. Novo Sistema de CFTV Híbrido</h3>
+            <ul>
+                <li>Sistema compatível com câmeras antigas e novas</li>
+                <li>Configuração centralizada</li>
+            </ul>
+            
+            <h3>4. Instalação de Novas Câmeras IP</h3>
+            <ul>
+                <li>Instalação de 8 câmeras IP em pontos estratégicos</li>
+                <li>Fixção de caixas organizadoras para fontes</li>
+                <li>Ajustes de ângulos para otimização</li>
+            </ul>
+            
+            <h3>5. Sistema de Gravação e Acesso Remoto</h3>
+            <ul>
+                <li>Implementação do sistema de gravação</li>
+                <li>Visualização via smartphone</li>
+                <li>Testes de acesso remoto e segurança</li>
+            </ul>
+            
+            <h3>6. Instalação do Rack para Equipamentos</h3>
+            <ul>
+                <li>Organização dos dispositivos</li>
+                <li>Ventilação e proteção dos equipamentos</li>
+            </ul>
+            
+            <h3>7. Instalação do Cabo HDMI</h3>
+            <ul>
+                <li>Passagem de cabo HDMI para TV no andar superior</li>
+                <li>Testes de exibição e ajustes de qualidade</li>
+            </ul>
+            
+            <h3>8. Instalação de Roteador Wi-Fi</h3>
+            <ul>
+                <li>Configuração de rede Wi-Fi dedicada</li>
+                <li>Testes de estabilidade e segurança</li>
+                <li>Integração com o sistema</li>
+            </ul>
+            
+            <h2>MATERIAIS NECESSÁRIOS</h2>
+            <p class="note">Todo material será providenciado pelo cliente</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th width="5%">Item</th>
+                        <th width="55%">Descrição</th>
+                        <th width="15%">Quantidade</th>
+                        <th width="25%">Referência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Rack Telecom 19" 6U X 470mm</td>
+                        <td>1 unidade</td>
+                        <td><a href="https://produto.mercadolivre.com.br/MLB-4626383210-rack-telecom-cabeamento-dados-cftv-19-6u-x-470mm-_JM?searchVariation=180358311754#polycard_client=search-nordic&searchVariation=180358311754&backend_model=search-backend&position=19&search_layout=stack&type=item&tracking_id=d49e5b72-c43d-4766-8646-9debe2ad36b0" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>DVR Intelbras IMHDX 5116 - 16 Canais IA Facial 4K</td>
+                        <td>1 unidade</td>
+                        <td><a href="https://www.mercadolivre.com.br/dvr-intelbras-imhdx-5116-16-canais-ia-facial-12mb-4k-127220v/p/MLB29382758#polycard_client=search-nordic&searchVariation=MLB29382758&wid=MLB5418175072&position=14&search_layout=grid&type=product&tracking_id=3473b55e-65f7-4e2c-a85f-4c01f991ecaa&sid=search" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Câmera Wi-Fi Intelbras IM5SC Full HD</td>
+                        <td>8 unidades</td>
+                        <td><a href="https://www.mercadolivre.com.br/intelbras-hd-im5sc-branco-gelo-1-unidade/p/MLB27705742?product_trigger_id=MLB40746708&picker=true&searchVariation=MLB27705742&quantity=1#reviews" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Caixa Organizadora Intelbras VBOX para Câmera</td>
+                        <td>8 unidades</td>
+                        <td><a href="https://produto.mercadolivre.com.br/MLB-3598202546-caixa-organizadora-de-passagem-intelbras-p-cmera-cftv-vbox-_JM#reviews" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Cabo HDMI 20m Premium 4K Blindado Gold</td>
+                        <td>1 unidade</td>
+                        <td><a href="https://www.mercadolivre.com.br/cabo-hdmi-20m-metros-preto-premium-4k-blindado-gold-3d-full-hd-tv-pc-video-game/p/MLB50913963#polycard_client=search-nordic&searchVariation=MLB50913963&backend_model=search-backend&wid=MLB3851698001&position=18&search_layout=grid&type=product&tracking_id=a9f5240b-08db-4b67-80ab-342b5a330afb&sid=search" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Roteador TP-Link Archer C80 Dual Band AC1900</td>
+                        <td>1 unidade</td>
+                        <td><a href="https://www.mercadolivre.com.br/roteador-archer-c80-wi-fi-gigabit-dual-band-ac1900-tp-link-bivolt/p/MLB15904250#polycard_client=search-nordic&searchVariation=MLB15904250&wid=MLB5352505500&position=2&search_layout=grid&type=product&tracking_id=1116559c-dc48-4da8-87b5-2ac00d06a4a8&sid=search" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Kit 10 Pçs Plug Tomada Fêmea 10A 110V-250V</td>
+                        <td>1 unidade</td>
+                        <td><a href="https://produto.mercadolivre.com.br/MLB-2095530229-kit-10-pcs-plug-tomada-fmea-10a-110v-a-250v-extenco-_JM?searchVariation=173942871885#polycard_client=search-nordic&searchVariation=173942871885&position=52&search_layout=grid&type=item&tracking_id=b3d366a1-90f4-4469-9a19-ca3d3b1f6eda" class="material-link" target="_blank">Ver produto</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>CONDIÇÕES GERAIS</h2>
+            
+            <h3>Materiais</h3>
+            <p>Todo o material necessário para a implementação e manutenção será de responsabilidade do cliente.</p>
+            
+            <h3>Garantia</h3>
+            <ul>
+                <li>Funcionamento do serviço garantido por 3 meses</li>
+                <li>Garantia dos equipamentos novos é de responsabilidade do fabricante/vendedor</li>
+            </ul>
+            
+            <h3>Prazos</h3>
+            <ul>
+                <li>Prazo de execução: Aproximadamente 2 dias (início a combinar)</li>
+                <li>Validade do orçamento: 1 mês (até 15/07/2025)</li>
+            </ul>
+            
+            <h2>VALORES</h2>
+            
+            <table class="pricing-table">
+                <tbody>
+                    <tr>
+                        <td>Mão de obra</td>
+                        <td>R$ 800,00</td>
+                    </tr>
+                    <tr>
+                        <td>Materiais (estimativa)</td>
+                        <td>R$ 4.500,00</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>TOTAL ESTIMADO</td>
+                        <td>R$ 5.300,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Forma de pagamento (mão de obra):</strong> Pix ou Dinheiro</p>
+            
+            <div class="signature">
+                <p>Assinatura do Responsável Técnico:</p>
+                <p style="margin: 20px 0; border-bottom: 1px solid #cbd5e0; padding-bottom: 10px;"></p>
+                <p><strong>Nome:</strong> Felipe Souza</p>
+                <p><strong>Contato:</strong> (21) 967140414 / felipe.csouzayahoo.com.br</p>
+                <p><strong>Empresa:</strong> CFTV Pro Soluções em Segurança</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Documento gerado em 15/06/2025 | Em caso de dúvidas, entre em contato conosco</p>
+            <p>Valores sujeitos à alteração após expiração da validade | CNPJ: XX.XXX.XXX/0001-XX</p>
+        </div>
+    </div>
+</body>
+</html>
